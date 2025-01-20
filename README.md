@@ -4,7 +4,6 @@
 
 [![](webapp.png)](https://soroushesnaashari.github.io/Password-Generator-App/)
 This repository contains the deployment-ready version of the Password Generator Web Application, which you can find the original repository [here](https://github.com/soroushesnaashari/Password-Generator). The app is designed to generate secure and random passwords based on user preferences.
-
 <br>
 
 ### How to use
