@@ -1,9 +1,9 @@
 ## Password Generator Web Application
-
 **`This repository makes it possible to host the application on GitHub Pages for easy access and use.`**
 <br>
 
-This repository contains the deployment-ready version of the Password Generator web application which you can find the original repository [here](https://github.com/soroushesnaashari/Password-Generator). The app is designed to generate secure and random passwords based on user preferences.
+[![](webapp.png)](https://soroushesnaashari.github.io/Password-Generator-App/)
+This repository contains the deployment-ready version of the Password Generator Web Application, which you can find the original repository [here](https://github.com/soroushesnaashari/Password-Generator). The app is designed to generate secure and random passwords based on user preferences.
 
 <br>
 
