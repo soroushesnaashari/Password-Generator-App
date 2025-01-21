@@ -23,7 +23,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
-            max-width: 450px;
+            max-width: 400px;
             width: 100%;
         }
         h1 {
@@ -86,7 +86,7 @@
             background-color: #a7a7a7;
         }
         .footer {
-            margin-top: 5rem;
+            margin-top: 4rem;
             font-size: 0.875rem;
             color: #FFFFFF;
         }
@@ -97,7 +97,7 @@
             color: #FFFFFF;
             text-decoration: none;
             margin: 0 0.5rem;
-            font-size: 1.125rem;
+            font-size: 1.25rem;
         }
         .social-icons a:hover {
             color: #a7a7a7;
@@ -111,7 +111,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>🔐 Password Generator</h1>
+        <h1>Password Generator</h1>
         <div class="mode-toggle">
             <button id="simple-mode" class="active" onclick="setMode('simple')">Simple</button>
             <button id="complex-mode" onclick="setMode('complex')">Complex</button>
@@ -120,7 +120,7 @@
 
         <div class="password-container" id="password-container" style="display: none;">
             <p class="password" id="generated-password"></p>
-            <button class="copy-button" onclick="copyPassword()">Copy Password</button>
+            <button class="copy-button" id="copy-button" onclick="copyPassword()">Copy Password</button>
         </div>
 
         <div class="footer">
@@ -181,9 +181,14 @@
 
         function copyPassword() {
             const passwordText = document.getElementById('generated-password').innerText;
+            const copyButton = document.getElementById('copy-button');
+
             navigator.clipboard.writeText(passwordText)
                 .then(() => {
-                    alert('Password copied to clipboard!');
+                    copyButton.innerText = 'Copied!';
+                    setTimeout(() => {
+                        copyButton.innerText = 'Copy Password';
+                    }, 2000);
                 })
                 .catch(() => {
                     alert('Failed to copy password.');
